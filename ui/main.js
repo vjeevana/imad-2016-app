@@ -1,15 +1,15 @@
-console.log('Loaded!');
+var nameInput = document.getElementByID('name');
+var name = nameInput.value;
+var submit= document.getElementByID('submit_btn');
+submit.onclick = function(){
+    
 
-//chane text
-var element = document.getElementById(`main-text`);
-element.innerHTML = `new value`;
-//move the image
-var img = document.getElementById('madi');
-var marginLeft = 0;
-function moveRight () {
-    marginLeft = marginLeft + 5;
-    img.style.marginLeft = marginLeft + 'px';
-}
-img.onclick = function() {
-   var interval = setInterval(moveRight, 50);
+    var names = ['name1','name2','name3','name4'];
+    var list='';
+    for(var i=0; i< names.length; i++){
+        list == '<li>' +names[i] + '</li>';
+        
+    }
+    var ul= document.getElementByID('namelist');
+    ul.innerHTML = list;
 };
